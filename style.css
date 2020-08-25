@@ -3,6 +3,31 @@ background-color: black;
 color: white;
 }
 
+header{
+    width: 90%;
+    margin: auto;
+    position: fixed;
+    background: color rgba(247, 246, 242, 0.5);
+    display: flex;
+    justify-content: space-between;
+}
+
+header img{
+height: 80px;
+width: auto;
+opacity: 0.5;
+}
+
+
+nav ol {
+    list-style: none;
+    display: flex;
+    
+}
+ol li{
+    margin: 10px;
+}
+
 #sect1 {
 background: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
 background-position : center;
@@ -26,9 +51,72 @@ align-items: center;
     width: 100%;
 }
 
-
 #films {
 display: flex;
 justify-content : space-around;
+
+}
+
+#infos{
+    background-color: rgb(50, 50, 50);
+}
+
+h2{
+    text-align: center ;
+}
+
+#infos div{
+    display: flex;
+    justify-content : space-around;
+    align-items: center;
+}
+
+#avantages{
+    flex-direction: column;
+}
+
+table{
+   empty-cells: hide;
+}
+
+caption{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+td,th{
+    border: 1px solid turquoise;
+    padding-right: 3px;
+    padding-left: 3px;
+    text-align: center;
+}
+
+#Addrese {
+    height: 300px;
+    text-align: center;
+    display: flex;
+    justify-content : space-around;
+    align-items: center;
+    background-color: rgb(100, 100, 100);
+}
+
+iframe{
+    height: 250px;
+
+}
+
+
+#contact div{
+    margin: auto;
+    display: flex;
+    width: 45%;
+    justify-content: center;
+    align-items: top;
+}
+fieldset{
+    border: none;
+    display: flex;
+    flex-direction: column;
+   
 }
 
