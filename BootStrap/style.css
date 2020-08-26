@@ -1,15 +1,18 @@
 body{
     background : black;
-    color: white;
+    color : white
 }
-#info{
-    background : gray ;
+#infos{
+    background :  rgb(45, 44, 44) ;
 }
 #addrese{
-    background : rgb(45, 44, 44);
+    background :rgb(79, 76, 76);
+}
+#addrese p {
+text-align: center;
 }
 #contact{
-    background : rgb(79, 76, 76);
+    background :  gray;
 }
 
 h2,h3{
@@ -50,4 +53,5 @@ table{
     text-align: center;
     justify-content: center;
     text-transform: capitalize;
+color: white;
 }
