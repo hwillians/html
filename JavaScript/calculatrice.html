@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP calculatrice</title>
+</head>
+
+<body>
+
+    <section id="grid">
+        <div class="container">
+            <input type="text" Id="affiche" size="20" maxlength="20" value="">
+            <div class="row">
+
+                <input type="button" id="7" value="7" onclick="add(this.value)">
+
+                <input type="button" id="8" value="8" onclick="add(this.value)">
+
+                <input type="button" id="9" value="9" onclick="add(this.value)">
+
+                <input type="button" id="soustraction" value="/" onclick="opp(this.value)">
+
+            </div>
+            <div class="row">
+
+                <input type="button" id="4" value="4" onclick="add(this.value)">
+
+                <input type="button" id="5" value="5" onclick="add(this.value)">
+
+                <input type="button" id="6" value="6" onclick="add(this.value)">
+
+                <input type="button" id="Multiplication" value="*" onclick="opp(this.value)">
+
+            </div>
+            <div class="row">
+
+                <input type="button" id="1" value="1" onclick="add(this.value)">
+
+                <input type="button" id="2" value="2" onclick="add(this.value)">
+
+                <input type="button" id="3" value="3" onclick="add(this.value)">
+
+                <input type="button" id="div" value="-" onclick="opp(this.value)">
+
+            </div>
+            <div class="row">
+
+                <input type="button" id="O" value="0" onclick="add(this.value)">
+
+                <input type="button" id="," value="," onclick="add(this.value)">
+
+                <input type="button" id="egual" value="=" onclick="result()">
+
+                <input type="button" id="7" value="+" onclick="opp(this.value)">
+
+                <input type="Button" Id="C" value="C" onClick="clear()">
+            </div>
+        </div>
+    </section>
+    <script>
+        let nombre1 = 0;
+        let nombre2 = 0;
+        let operation;
+        let affichage = document.getElementById("affiche");
+
+
+        function add(nombre) {
+            if (affichage.value == "0" || nombre1 == 0) {
+                nombre1 = nombre;
+            } else {
+                nombre1 += nombre;
+            }
+            affichage.value = nombre1;
+        }
+
+
+        function clear() {
+            nombre1 = 0;
+            nombre2 = 0;
+            affichage.value = 0;
+        }
+
+        function opp(valeur) {
+            if (nombre1 == 0) {
+                resultado = parseInt(affichage.value);
+            }
+            nombre2 = parseInt(nombre1);
+            nombre1 = 0;
+            operation = valeur;
+        }
+
+
+        function result() {
+            nombre1 = parseInt(nombre1);
+            switch (operation) {
+                case '+':
+                    nombre1 += nombre2;
+                    break;
+                case '-':
+                    nombre1 = nombre2 - nombre1;
+                    break;
+                case '*':
+                    nombre1 *= nombre2;
+                    break;
+                case '/':
+                    nombre1 = nombre2 / nombre1;
+                    break;
+            }
+            affichage.value = nombre1;
+            nombre2 = parseInt(nombre1);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
