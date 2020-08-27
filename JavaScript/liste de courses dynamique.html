@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Shopping list example</title>
+  <style>
+    li {
+      margin-bottom: 10px;
+    }
+    li button {
+      font-size: 8px;
+      margin-left: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>My shopping list</h1>
+
+  <div>
+    <label for="item">Enter a new item:</label>
+    <input type="text" name="item" id="item">
+    <button>Ajouter</button>
+  </div>
+
+  <ul>
+
+  </ul>
+
+  <script>
+    //Créez trois variables, contenant des références à la liste <ul>, champ <input>, et bouton <button>.
+    const liste = document.querySelector('ul');
+    const inp = document.querySelector('input');
+    const but = document.querySelector('button');
+
+    // Créez une fonction qui est déclenchée lorsqu'on clique sur le bouton. 
+    but.onclick = function() {
+      // À l'intérieur du corps de la fonction, commencez par stoquer la valeur (propriété value) du champ dans une variable.
+      let maValeur = inp.value;
+
+      //Ensuite, videz le champ en définissant sa valeur à une chaîne vide — ''.
+      inp.value = '';
+
+      //Créez trois nouveaux éléments — un élément de liste <li>, un <span> et <button>, et stockez-les dans des variables.
+      const newItem = document.createElement('li');
+      const newSpan = document.createElement('span');
+      const newBut = document.createElement('button');
+
+      //Ajoutez le <span> et <button> comme enfant du <li>.
+      newItem.appendChild(newSpan);
+      newItem.appendChild(newBut);
+
+      //Définissez le contenu du <span> à la valeur du champ que vous avez récupéré précedemment, .
+      newSpan.textContent = maValeur;
+      //et définissez le contenu du boutton à "Supprimer"
+      newBut.textContent = 'Suprimer';
+
+      //Ajoutez le <li> comme enfant de la liste.
+      liste.appendChild(newItem);
+
+      //Ajoutez un gestionnaire d'événément pour le bouton "Supprimer", pour que quand il est cliqué, le <li> dans lequel il se situe est supprimé.
+      newBut.onclick = function (e) {
+        liste.removeChild(newItem);
+      }
+
+      //Finalement, utilisez la méthode HTMLElement.focus pour donner le focus au champ, qu'il soit prêt à recevoir la valeur du prochain élément.
+      input.focus;
+    }
+
+    
+  </script>
+</body>
+
+</html>
