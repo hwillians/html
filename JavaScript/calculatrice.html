@@ -5,60 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TP calculatrice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
     <section id="grid">
         <div class="container">
-            <input type="text" Id="affiche" size="20" maxlength="20" value="">
             <div class="row">
-
-                <input type="button" id="7" value="7" onclick="add(this.value)">
-
-                <input type="button" id="8" value="8" onclick="add(this.value)">
-
-                <input type="button" id="9" value="9" onclick="add(this.value)">
-
-                <input type="button" id="soustraction" value="/" onclick="opp(this.value)">
+                <input type="text" Id="affiche" size="20" maxlength="20" class="col" value="0">
 
             </div>
             <div class="row">
 
-                <input type="button" id="4" value="4" onclick="add(this.value)">
+                <input type="button" value="7" class="col" onclick="add(this.value)">
 
-                <input type="button" id="5" value="5" onclick="add(this.value)">
+                <input type="button" value="8" class="col" onclick="add(this.value)">
 
-                <input type="button" id="6" value="6" onclick="add(this.value)">
+                <input type="button" value="9" class="col" onclick="add(this.value)">
 
-                <input type="button" id="Multiplication" value="*" onclick="opp(this.value)">
-
-            </div>
-            <div class="row">
-
-                <input type="button" id="1" value="1" onclick="add(this.value)">
-
-                <input type="button" id="2" value="2" onclick="add(this.value)">
-
-                <input type="button" id="3" value="3" onclick="add(this.value)">
-
-                <input type="button" id="div" value="-" onclick="opp(this.value)">
+                <input type="button" value="/" class="col" onclick="opp(this.value)">
 
             </div>
             <div class="row">
 
-                <input type="button" id="O" value="0" onclick="add(this.value)">
+                <input type="button" value="4" class="col" onclick="add(this.value)">
 
-                <input type="button" id="," value="," onclick="add(this.value)">
+                <input type="button" value="5" class="col" onclick="add(this.value)">
 
-                <input type="button" id="egual" value="=" onclick="result()">
+                <input type="button" value="6" class="col" onclick="add(this.value)">
 
-                <input type="button" id="7" value="+" onclick="opp(this.value)">
+                <input type="button" value="*" class="col" onclick="opp(this.value)">
 
-                <input type="Button" Id="C" value="C" onClick="clear()">
+            </div>
+            <div class="row">
+
+                <input type="button" value="1" class="col" onclick="add(this.value)">
+
+                <input type="button" value="2" class="col" onclick="add(this.value)">
+
+                <input type="button" value="3" class="col" onclick="add(this.value)">
+
+                <input type="button" value="-" class="col" onclick="opp(this.value)">
+
+            </div>
+            <div class="row">
+
+                <input type="button" value="0" class="col" onclick="add(this.value)">
+
+                <input type="button" value="=" class="col" onclick="result()">
+
+                <input type="button" value="+" class="col" onclick="opp(this.value)">
+
+                <input type="Button" value="C" class="col" onclick="clear()">
             </div>
         </div>
     </section>
+
     <script>
         let nombre1 = 0;
         let nombre2 = 0;
@@ -114,6 +120,17 @@
 
 
     </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 
 </body>
 
