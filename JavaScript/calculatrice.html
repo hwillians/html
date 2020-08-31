@@ -16,7 +16,7 @@
     <section id="grid">
         <div class="container">
             <div class="row">
-                <input type="text" Id="affiche" size="20" maxlength="20" class="col" value="0">
+                <input type="text" size="20" maxlength="20" class="col" value="0">
             </div>
             <div class="row">
                 <input type="button" value="7" class="col" onclick="add(this.value)">
@@ -38,7 +38,7 @@
             </div>
             <div class="row">
                 <input type="button" value="0" class="col" onclick="add(this.value)">
-                <input type="Button" value="C" class="col" onclick="clear()">
+                <input type="button" value="C" class="col" onclick="c()">
                 <input type="button" value="=" class="col" onclick="result()">
                 <input type="button" value="+" class="col" onclick="opp(this.value)">
             </div>
@@ -49,7 +49,7 @@
         let nombre1 = 0;
         let nombre2 = 0;
         let operation;
-        let affichage = document.getElementById("affiche");
+        let affichage = document.querySelector("input[type=text]");
 
         function add(nombre) {
             if (affichage.value == "0" || nombre1 == 0) {
@@ -60,7 +60,7 @@
             affichage.value = nombre1;
         }
 
-        function clear() {
+        function c(){
             affichage.value = 0;
             nombre1 = 0;
             nombre2 = 0;
@@ -91,6 +91,7 @@
                     nombre1 = nombre2 / nombre1;
                     break;
             }
+            
             affichage.value = nombre1;
             nombre2 = parseInt(nombre1);
         }
