@@ -67,9 +67,7 @@
         }
 
         function opp(valeur) {
-            if (nombre1 == 0) {
-                resultado = parseInt(affichage.value);
-            }
+            
             nombre2 = parseInt(nombre1);
             nombre1 = 0;
             operation = valeur;
@@ -91,7 +89,7 @@
                     nombre1 = nombre2 / nombre1;
                     break;
             }
-            
+
             affichage.value = nombre1;
             nombre2 = parseInt(nombre1);
         }
