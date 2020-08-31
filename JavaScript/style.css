@@ -1,0 +1,11 @@
+body{
+    background-color: black;
+}
+input[type=text]{
+    text-align: end;
+}
+
+.container{
+    width: 200px;
+    margin-top: 200px;
+}

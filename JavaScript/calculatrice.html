@@ -17,50 +17,30 @@
         <div class="container">
             <div class="row">
                 <input type="text" Id="affiche" size="20" maxlength="20" class="col" value="0">
-
             </div>
             <div class="row">
-
                 <input type="button" value="7" class="col" onclick="add(this.value)">
-
                 <input type="button" value="8" class="col" onclick="add(this.value)">
-
                 <input type="button" value="9" class="col" onclick="add(this.value)">
-
                 <input type="button" value="/" class="col" onclick="opp(this.value)">
-
             </div>
             <div class="row">
-
                 <input type="button" value="4" class="col" onclick="add(this.value)">
-
                 <input type="button" value="5" class="col" onclick="add(this.value)">
-
                 <input type="button" value="6" class="col" onclick="add(this.value)">
-
                 <input type="button" value="*" class="col" onclick="opp(this.value)">
-
             </div>
             <div class="row">
-
                 <input type="button" value="1" class="col" onclick="add(this.value)">
-
                 <input type="button" value="2" class="col" onclick="add(this.value)">
-
                 <input type="button" value="3" class="col" onclick="add(this.value)">
-
                 <input type="button" value="-" class="col" onclick="opp(this.value)">
-
             </div>
             <div class="row">
-
                 <input type="button" value="0" class="col" onclick="add(this.value)">
-
-                <input type="button" value="=" class="col" onclick="result()">
-
-                <input type="button" value="+" class="col" onclick="opp(this.value)">
-
                 <input type="Button" value="C" class="col" onclick="clear()">
+                <input type="button" value="=" class="col" onclick="result()">
+                <input type="button" value="+" class="col" onclick="opp(this.value)">
             </div>
         </div>
     </section>
@@ -71,7 +51,6 @@
         let operation;
         let affichage = document.getElementById("affiche");
 
-
         function add(nombre) {
             if (affichage.value == "0" || nombre1 == 0) {
                 nombre1 = nombre;
@@ -81,11 +60,10 @@
             affichage.value = nombre1;
         }
 
-
         function clear() {
+            affichage.value = 0;
             nombre1 = 0;
             nombre2 = 0;
-            affichage.value = 0;
         }
 
         function opp(valeur) {
@@ -96,7 +74,6 @@
             nombre1 = 0;
             operation = valeur;
         }
-
 
         function result() {
             nombre1 = parseInt(nombre1);
@@ -117,7 +94,6 @@
             affichage.value = nombre1;
             nombre2 = parseInt(nombre1);
         }
-
 
     </script>
     <!-- Optional JavaScript -->
